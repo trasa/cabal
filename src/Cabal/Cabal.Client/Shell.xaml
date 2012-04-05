@@ -1,0 +1,31 @@
+﻿<Window x:Class="Cabal.Client.Shell"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:Regions="clr-namespace:Microsoft.Practices.Composite.Presentation.Regions;assembly=Microsoft.Practices.Composite.Presentation"
+    xmlns:inf="clr-namespace:Cabal.Client.Core.Infrastructure;assembly=Cabal.Client.Core"
+		inf:RegionPopupBehaviors.CreatePopupRegionWithName="PopupRegion"
+		inf:RegionPopupBehaviors.ContainerWindowStyle="{StaticResource WindowRegionStyle}"
+				mc:Ignorable="d" d:DesignWidth="1268" d:DesignHeight="715"
+		Width="1265"
+		Height="785"
+		KeyDown="Shell_KeyDown"
+		KeyUp="Shell_KeyUp"
+		>
+	<DockPanel LastChildFill="true">
+		<Border BorderBrush="Black" BorderThickness="3" Background="Gray" DockPanel.Dock="Top" >
+			<ContentControl Name="MenuBar" Height="25" Regions:RegionManager.RegionName="MenuBarRegion" />
+		</Border>
+
+		<Border BorderBrush="Black" BorderThickness="3" Background="Gray" DockPanel.Dock="Bottom" >
+			<ContentControl Name="BottomPanel" Height="150" Regions:RegionManager.RegionName="BottomPanelRegion" />
+		</Border>
+
+		<Border BorderBrush="Black" BorderThickness="3" Background="Gray" DockPanel.Dock="Left">
+			<ContentControl Name="LeftPanel" Width="250" Regions:RegionManager.RegionName="LeftPanelRegion" />
+		</Border>
+
+		<ContentControl Name="MainRegion" Regions:RegionManager.RegionName="MainRegion"  />
+	</DockPanel>
+</Window>

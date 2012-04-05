@@ -1,0 +1,90 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	xmlns:ViewModels="clr-namespace:Cabal.Client.Modules.TerritoryStats.PresentationModels"
+	x:Class="Cabal.Client.Modules.TerritoryStats.Views.UnitsView">
+	<UserControl.Resources>
+		<Style x:Key="UnitName" TargetType="TextBlock">
+			<Setter Property="HorizontalAlignment" Value="Right" />
+			<Setter Property="Margin" Value="0,0,3,1" />
+		</Style>
+	</UserControl.Resources>
+	<UserControl.DataContext>
+		<ViewModels:UnitsPresentationModel 
+			ArmyNationality="Germany"
+			Infantry="0"
+			Armor="0"
+			Fighter="3"
+			Bomber="4"
+			Battleship="5"
+			Carrier="0"
+			Submarine="7"
+			Transport="8"
+			Antiaircraft="0"
+			IndustrialComplex="1"
+		/>
+	</UserControl.DataContext>
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="20"/>
+			<ColumnDefinition Width="Auto"/>
+		</Grid.ColumnDefinitions>
+		
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			
+		</Grid.RowDefinitions>
+		<Image Grid.Column="0" Grid.Row="0" x:Name="ArmyNationality" Height="15" Source="{Binding ArmyNationalityImageSource}" Margin="0,0,5,0"/>
+		<StackPanel Grid.Column="1" Grid.Row="0">
+			<StackPanel Orientation="Horizontal" Visibility="{Binding InfantryVisible}">
+				<TextBlock Style="{StaticResource UnitName}">Infantry:</TextBlock>
+				<TextBlock Text="{Binding Infantry}" />
+			</StackPanel>
+			<StackPanel Orientation="Horizontal" Visibility="{Binding ArmorVisible}">
+				<TextBlock Style="{StaticResource UnitName}">Armor:</TextBlock>
+				<TextBlock Text="{Binding Armor}"/>
+			</StackPanel>
+			<StackPanel Orientation="Horizontal" Visibility="{Binding FighterVisible}">
+				<TextBlock Style="{StaticResource UnitName}">Fighter:</TextBlock>
+				<TextBlock Text="{Binding Fighter}"/>
+			</StackPanel>
+			<StackPanel Orientation="Horizontal" Visibility="{Binding BomberVisible}">
+				<TextBlock Style="{StaticResource UnitName}">Bomber:</TextBlock>
+				<TextBlock Text="{Binding Bomber}"/>
+			</StackPanel>
+			<StackPanel Orientation="Horizontal" Visibility="{Binding BattleshipVisible}">
+				<TextBlock Style="{StaticResource UnitName}">Battleship:</TextBlock>
+				<TextBlock Text="{Binding Battleship}"/>
+			</StackPanel>
+			<StackPanel Orientation="Horizontal" Visibility="{Binding CarrierVisible}">
+				<TextBlock Style="{StaticResource UnitName}">Carrier:</TextBlock>
+				<TextBlock Text="{Binding Carrier}"/>
+			</StackPanel>
+			<StackPanel Orientation="Horizontal" Visibility="{Binding SubmarineVisible}">
+				<TextBlock Style="{StaticResource UnitName}">Submarine:</TextBlock>
+				<TextBlock Text="{Binding Submarine}"/>
+			</StackPanel>
+			<StackPanel Orientation="Horizontal" Visibility="{Binding TransportVisible}">
+				<TextBlock Style="{StaticResource UnitName}">Transport:</TextBlock>
+				<TextBlock Text="{Binding Transport}"/>
+			</StackPanel>
+			<StackPanel Orientation="Horizontal" Visibility="{Binding AntiaircraftVisible}">
+				<TextBlock Style="{StaticResource UnitName}">AA:</TextBlock>
+				<TextBlock Text="{Binding Antiaircraft}"/>
+			</StackPanel>
+			<StackPanel Orientation="Horizontal" Visibility="{Binding IndustrialComplexVisible}">
+				<TextBlock Style="{StaticResource UnitName}">Complex:</TextBlock>
+				<TextBlock Text="{Binding IndustrialComplex}"/>
+			</StackPanel>
+		</StackPanel>
+		
+		
+		
+		
+		
+		
+	</Grid>
+</UserControl>

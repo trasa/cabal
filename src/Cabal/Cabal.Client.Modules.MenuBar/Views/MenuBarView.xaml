@@ -1,0 +1,10 @@
+﻿<UserControl x:Class="Cabal.Client.Modules.MenuBar.Views.MenuBarView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:inf="clr-namespace:Cabal.Client.Core.Infrastructure;assembly=Cabal.Client.Core">
+	<StackPanel Orientation="Horizontal">
+		<Button Command="{x:Static inf:GlobalCommands.RefreshMapCommand}" >Refresh Map</Button>
+		<Button Command="{x:Static inf:GlobalCommands.ResetMapPanAndZoomCommand}">Reset Pan and Zoom</Button>
+		<Button Click="test_Click">Test</Button>
+	</StackPanel>
+</UserControl>

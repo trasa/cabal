@@ -1,0 +1,87 @@
+﻿<UserControl x:Class="Cabal.Client.Modules.Orders.Views.WeaponsStatusView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:corecontrols="clr-namespace:Cabal.Client.Core.Controls;assembly=Cabal.Client.Core"
+>
+	<UserControl.Resources>
+		<corecontrols:VisibilityConverter x:Key="VisibilityConverter"/>
+	</UserControl.Resources>
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+		</Grid.RowDefinitions>
+
+		<Grid.Resources>
+			<Style TargetType="{x:Type TextBlock}">
+				<Setter Property="VerticalAlignment" Value="Center" />
+				<Setter Property="HorizontalAlignment" Value="Right" />
+				<Setter Property="FontWeight" Value="Bold" />
+				<Setter Property="Margin" Value="15,0,15,0"/>
+			</Style>
+		</Grid.Resources>
+		
+		<Image Grid.Column="1" Grid.Row="0" Height="30" Source="pack://application:,,,/Cabal.Client.Core;component/Images/SovietMarker.png" />
+		<Image Grid.Column="2" Grid.Row="0" Height="30" Source="pack://application:,,,/Cabal.Client.Core;component/Images/GermanyMarker.png" />
+		<Image Grid.Column="3" Grid.Row="0" Height="30" Source="pack://application:,,,/Cabal.Client.Core;component/Images/UnitedKingdomMarker.png" />
+		<Image Grid.Column="4" Grid.Row="0" Height="30" Source="pack://application:,,,/Cabal.Client.Core;component/Images/JapanMarker.png" />
+		<Image Grid.Column="5" Grid.Row="0" Height="30" Source="pack://application:,,,/Cabal.Client.Core;component/Images/USAMarker.png" />
+
+		<TextBlock Grid.Column="0" Grid.Row="1">Jet Power</TextBlock>
+		<TextBlock Grid.Column="0" Grid.Row="2">Rockets</TextBlock>
+		<TextBlock Grid.Column="0" Grid.Row="3">Super Subs</TextBlock>
+		<TextBlock Grid.Column="0" Grid.Row="4">Long Range Air</TextBlock>
+		<TextBlock Grid.Column="0" Grid.Row="5">Industrial Tech</TextBlock>
+		<TextBlock Grid.Column="0" Grid.Row="6">Heavy Bombers</TextBlock>
+		
+		<Image Grid.Column="1" Grid.Row="1" Visibility="{Binding JetPower_Soviet, Converter={StaticResource VisibilityConverter}}" Height="30" Source="pack://application:,,,/Cabal.Client.Core;component/Images/GreenCheckButton.png" />
+		<Image Grid.Column="2" Grid.Row="1" Visibility="{Binding JetPower_Germany, Converter={StaticResource VisibilityConverter}}" Height="30" Source="pack://application:,,,/Cabal.Client.Core;component/Images/GreenCheckButton.png" />
+		<Image Grid.Column="3" Grid.Row="1" Visibility="{Binding JetPower_UnitedKingdom, Converter={StaticResource VisibilityConverter}}" Height="30" Source="pack://application:,,,/Cabal.Client.Core;component/Images/GreenCheckButton.png" />
+		<Image Grid.Column="4" Grid.Row="1" Visibility="{Binding JetPower_Japan, Converter={StaticResource VisibilityConverter}}" Height="30" Source="pack://application:,,,/Cabal.Client.Core;component/Images/GreenCheckButton.png" />
+		<Image Grid.Column="5" Grid.Row="1" Visibility="{Binding JetPower_USA, Converter={StaticResource VisibilityConverter}}" Height="30" Source="pack://application:,,,/Cabal.Client.Core;component/Images/GreenCheckButton.png" />
+
+		<Image Grid.Column="1" Grid.Row="2" Visibility="{Binding Rockets_Soviet, Converter={StaticResource VisibilityConverter}}" Height="30" Source="pack://application:,,,/Cabal.Client.Core;component/Images/GreenCheckButton.png" />
+		<Image Grid.Column="2" Grid.Row="2" Visibility="{Binding Rockets_Germany, Converter={StaticResource VisibilityConverter}}" Height="30" Source="pack://application:,,,/Cabal.Client.Core;component/Images/GreenCheckButton.png" />
+		<Image Grid.Column="3" Grid.Row="2" Visibility="{Binding Rockets_UnitedKingdom, Converter={StaticResource VisibilityConverter}}" Height="30" Source="pack://application:,,,/Cabal.Client.Core;component/Images/GreenCheckButton.png" />
+		<Image Grid.Column="4" Grid.Row="2" Visibility="{Binding Rockets_Japan, Converter={StaticResource VisibilityConverter}}" Height="30" Source="pack://application:,,,/Cabal.Client.Core;component/Images/GreenCheckButton.png" />
+		<Image Grid.Column="5" Grid.Row="2" Visibility="{Binding Rockets_USA, Converter={StaticResource VisibilityConverter}}" Height="30" Source="pack://application:,,,/Cabal.Client.Core;component/Images/GreenCheckButton.png" />
+
+		<Image Grid.Column="1" Grid.Row="3" Visibility="{Binding SuperSubs_Soviet, Converter={StaticResource VisibilityConverter}}" Height="30" Source="pack://application:,,,/Cabal.Client.Core;component/Images/GreenCheckButton.png" />
+		<Image Grid.Column="2" Grid.Row="3" Visibility="{Binding SuperSubs_Germany, Converter={StaticResource VisibilityConverter}}" Height="30" Source="pack://application:,,,/Cabal.Client.Core;component/Images/GreenCheckButton.png" />
+		<Image Grid.Column="3" Grid.Row="3" Visibility="{Binding SuperSubs_UnitedKingdom, Converter={StaticResource VisibilityConverter}}" Height="30" Source="pack://application:,,,/Cabal.Client.Core;component/Images/GreenCheckButton.png" />
+		<Image Grid.Column="4" Grid.Row="3" Visibility="{Binding SuperSubs_Japan, Converter={StaticResource VisibilityConverter}}" Height="30" Source="pack://application:,,,/Cabal.Client.Core;component/Images/GreenCheckButton.png" />
+		<Image Grid.Column="5" Grid.Row="3" Visibility="{Binding SuperSubs_USA, Converter={StaticResource VisibilityConverter}}" Height="30" Source="pack://application:,,,/Cabal.Client.Core;component/Images/GreenCheckButton.png" />
+
+		<Image Grid.Column="1" Grid.Row="4" Visibility="{Binding LongRangeAir_Soviet, Converter={StaticResource VisibilityConverter}}" Height="30" Source="pack://application:,,,/Cabal.Client.Core;component/Images/GreenCheckButton.png" />
+		<Image Grid.Column="2" Grid.Row="4" Visibility="{Binding LongRangeAir_Germany, Converter={StaticResource VisibilityConverter}}" Height="30" Source="pack://application:,,,/Cabal.Client.Core;component/Images/GreenCheckButton.png" />
+		<Image Grid.Column="3" Grid.Row="4" Visibility="{Binding LongRangeAir_UnitedKingdom, Converter={StaticResource VisibilityConverter}}" Height="30" Source="pack://application:,,,/Cabal.Client.Core;component/Images/GreenCheckButton.png" />
+		<Image Grid.Column="4" Grid.Row="4" Visibility="{Binding LongRangeAir_Japan, Converter={StaticResource VisibilityConverter}}" Height="30" Source="pack://application:,,,/Cabal.Client.Core;component/Images/GreenCheckButton.png" />
+		<Image Grid.Column="5" Grid.Row="4" Visibility="{Binding LongRangeAir_USA, Converter={StaticResource VisibilityConverter}}" Height="30" Source="pack://application:,,,/Cabal.Client.Core;component/Images/GreenCheckButton.png" />
+
+		<Image Grid.Column="1" Grid.Row="5" Visibility="{Binding IndustrialTech_Soviet, Converter={StaticResource VisibilityConverter}}" Height="30" Source="pack://application:,,,/Cabal.Client.Core;component/Images/GreenCheckButton.png" />
+		<Image Grid.Column="2" Grid.Row="5" Visibility="{Binding IndustrialTech_Germany, Converter={StaticResource VisibilityConverter}}" Height="30" Source="pack://application:,,,/Cabal.Client.Core;component/Images/GreenCheckButton.png" />
+		<Image Grid.Column="3" Grid.Row="5" Visibility="{Binding IndustrialTech_UnitedKingdom, Converter={StaticResource VisibilityConverter}}" Height="30" Source="pack://application:,,,/Cabal.Client.Core;component/Images/GreenCheckButton.png" />
+		<Image Grid.Column="4" Grid.Row="5" Visibility="{Binding IndustrialTech_Japan, Converter={StaticResource VisibilityConverter}}" Height="30" Source="pack://application:,,,/Cabal.Client.Core;component/Images/GreenCheckButton.png" />
+		<Image Grid.Column="5" Grid.Row="5" Visibility="{Binding IndustrialTech_USA, Converter={StaticResource VisibilityConverter}}" Height="30" Source="pack://application:,,,/Cabal.Client.Core;component/Images/GreenCheckButton.png" />
+
+		<Image Grid.Column="1" Grid.Row="6" Visibility="{Binding HeavyBombers_Soviet, Converter={StaticResource VisibilityConverter}}" Height="30" Source="pack://application:,,,/Cabal.Client.Core;component/Images/GreenCheckButton.png" />
+		<Image Grid.Column="2" Grid.Row="6" Visibility="{Binding HeavyBombers_Germany, Converter={StaticResource VisibilityConverter}}" Height="30" Source="pack://application:,,,/Cabal.Client.Core;component/Images/GreenCheckButton.png" />
+		<Image Grid.Column="3" Grid.Row="6" Visibility="{Binding HeavyBombers_UnitedKingdom, Converter={StaticResource VisibilityConverter}}" Height="30" Source="pack://application:,,,/Cabal.Client.Core;component/Images/GreenCheckButton.png" />
+		<Image Grid.Column="4" Grid.Row="6" Visibility="{Binding HeavyBombers_Japan, Converter={StaticResource VisibilityConverter}}" Height="30" Source="pack://application:,,,/Cabal.Client.Core;component/Images/GreenCheckButton.png" />
+		<Image Grid.Column="5" Grid.Row="6" Visibility="{Binding HeavyBombers_USA, Converter={StaticResource VisibilityConverter}}" Height="30" Source="pack://application:,,,/Cabal.Client.Core;component/Images/GreenCheckButton.png" />
+
+	</Grid>
+</UserControl>
