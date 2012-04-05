@@ -1,0 +1,24 @@
+﻿<Window x:Class="ZoomWpfTest.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Window1"
+    xmlns:Anno="http://schemas.microsoft.com/expression/blend/extensions/annotations/2008"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d Anno"
+	xmlns:local="clr-namespace:ZoomWpfTest"
+    Width="1025" Height="615"
+    KeyUp="Window_KeyUp"
+	Background="Gray">
+
+	<local:PanAndZoomViewer x:Name="zoomViewer" MinimumZoom="1" MaximumZoom="4">
+		<Canvas x:Name="LayoutRoot" Background="White" Width="994" Height="569">
+			<Image
+				Source="images/axisalmp.jpg" Stretch="Fill"
+				Height="569"
+				Width="994"
+						/>
+		</Canvas>
+	</local:PanAndZoomViewer>
+
+</Window>

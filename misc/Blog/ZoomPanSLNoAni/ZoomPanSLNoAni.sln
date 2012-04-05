@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomPanSLNoAni", "ZoomPanSLNoAni\ZoomPanSLNoAni.csproj", "{D0144B3C-E66E-4B8F-BE74-A12889E73DBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomPanSLNoAni.Web", "ZoomPanSLNoAni.Web\ZoomPanSLNoAni.Web.csproj", "{4B6EF8FB-C90E-4113-AAC7-03A017D3EB1D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D0144B3C-E66E-4B8F-BE74-A12889E73DBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0144B3C-E66E-4B8F-BE74-A12889E73DBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0144B3C-E66E-4B8F-BE74-A12889E73DBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0144B3C-E66E-4B8F-BE74-A12889E73DBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B6EF8FB-C90E-4113-AAC7-03A017D3EB1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B6EF8FB-C90E-4113-AAC7-03A017D3EB1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B6EF8FB-C90E-4113-AAC7-03A017D3EB1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B6EF8FB-C90E-4113-AAC7-03A017D3EB1D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

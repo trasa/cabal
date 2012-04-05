@@ -1,0 +1,18 @@
+﻿<Window x:Class="VisibleTest.Client.Shell"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:Regions="clr-namespace:Microsoft.Practices.Composite.Presentation.Regions;assembly=Microsoft.Practices.Composite.Presentation"
+    mc:Ignorable="d" d:DesignWidth="1194" d:DesignHeight="600"
+		Width="200"
+		Height="200"
+		>
+	<DockPanel LastChildFill="true">
+		
+		<Border BorderBrush="Black" BorderThickness="3" Background="Gray" DockPanel.Dock="Top" >
+			<ContentControl Name="MenuBar" Height="25" Regions:RegionManager.RegionName="MenuBar" />
+		</Border>
+		
+		<ContentControl Name="MainRegion" Regions:RegionManager.RegionName="MainRegion"  />
+	</DockPanel>
+</Window>
