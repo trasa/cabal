@@ -1,0 +1,20 @@
+"CABAL" - an Axis&Allies multiplayer clone 
+
+This was an experiment to give me a chance to play with WPF, Silverlight,
+and WCF to tie things together. 
+
+If I were to pick this project up again, I would NOT use WPF but instead 
+would write the front end using Unity or something better suited to 2D 
+board manipulation.  WPF required too much work, took away from the joy
+of writing AI.
+
+Using:
+* WPF for the client (displaying a 2D 'game board' using mechanics commonly 
+  found in RTS games)
+* WCF for communications to the server
+* MVC to host the server side of the game
+* a (sort of) competitive AI hosted at the server to compete against.
+  (Ok, not really competitive.  Or complete.)
+
+
+
